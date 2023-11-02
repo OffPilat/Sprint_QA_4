@@ -1,112 +1,140 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class SelectorsOrderPage {
     private final WebDriver webDriver;
-    public static final String URL_ORDER_CLIENTPAGE = "https://qa-scooter.praktikum-services.ru/order";
-    private By nameFieldorderForm = By.xpath(".//input[contains (@placeholder,'Имя')] ");
-    private By surnameFieldorderForm = By.xpath(".//input[contains (@placeholder,'Фамилия')]");
-    private By addressFieldorderForm = By.xpath(".//input[contains (@placeholder,'Адрес')]");
-    private By metroFieldorderForm = By.xpath(".//input[contains (@placeholder,'метро')]");
-    private By metrostationorderForm = By.xpath(".//div[text()='Черкизовская']");
-    private By phoneFieldorderForm = By.xpath(".//input[contains (@placeholder,'Телефон')]");
-    private By buttonNextorderForm = By.xpath(".//button[contains (text(), 'Далее')]");
-    private By titleOrderScooterPageForm = By.cssSelector("div .Order_Header__BZXOb");
-    private By calendarfieldorderForm = By.cssSelector(".react-datepicker__input-container");
-    private By calendardataselectdorderForm = By.xpath(".//div[contains (@aria-label, '1-е ноября 2023')]");
-    private By rentperiodfield = By.cssSelector(".Dropdown-root");
-    private By rentperioselectdropwdownfield = By.xpath(".//div[@class='Dropdown-option'][1]");
-    private By checkboxColor1 = By.cssSelector("#black");
-    private By checkboxColor2 = By.cssSelector("#grey");
-    private By CommentFieldorderForm = By.xpath(".//input[contains (@placeholder,'Комментарий')]");
-    private By buttonOrderorderForm = By.xpath(".//div[contains (@class,'Order')]/button[contains (text(), 'Заказать')]");
-    private By buttonYesorderForm = By.xpath(".//div[contains (@class,'Order')]/button[contains (text(), 'Да')]");
 
     public SelectorsOrderPage(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
 
-    public By getnameFieldorderForm() {
-        return this.nameFieldorderForm;
+    public static final String URL_ORDER_CLIENT_PAGE = "https://qa-scooter.praktikum-services.ru/order";
+    public static String assertSuccessFirstFormOrder = "Про аренду";
+    public static String assertSuccessSecondFormOrder = "Заказ оформлен";
+    public static String assertTitleFirstFormOrder = "Для кого самокат";
+
+    private By nameFieldOrderForm = By.xpath(".//input[contains (@placeholder,'Имя')] ");
+
+    public By getNameFieldOrderForm() {
+        return this.nameFieldOrderForm;
     }
 
-    public By getsurnameFieldorderForm() {
-        return this.surnameFieldorderForm;
+    private By surnameFieldOrderForm = By.xpath(".//input[contains (@placeholder,'Фамилия')]");
+
+    public By getSurnameFieldOrderForm() {
+        return this.surnameFieldOrderForm;
     }
 
-    public By getaddressFieldorderForm() {
-        return this.addressFieldorderForm;
+    private By addressFieldOrderForm = By.xpath(".//input[contains (@placeholder,'Адрес')]");
+
+    public By getAddressFieldOrderForm() {
+        return this.addressFieldOrderForm;
     }
 
-    public By getmetroFieldorderForm() {
-        return this.metroFieldorderForm;
+    private By metroFieldOrderForm = By.xpath(".//input[contains (@placeholder,'метро')]");
+
+    public By getMetroFieldOrderForm() {
+        return this.metroFieldOrderForm;
     }
 
-    public By getmetrostationorderForm() {
-        return this.metrostationorderForm;
+    private By metroStationOrderForm = By.xpath(".//div[text()='Черкизовская']");
+
+    public By getMetroStationOrderForm() {
+        return this.metroStationOrderForm;
     }
 
-    public By getphoneFieldorderForm() {
-        return this.phoneFieldorderForm;
+    private By phoneFieldOrderForm = By.xpath(".//input[contains (@placeholder,'Телефон')]");
+
+    public By getPhoneFieldOrderForm() {
+        return this.phoneFieldOrderForm;
     }
 
-    public By getbuttonNextorderForm() {
-        return this.buttonNextorderForm;
+    private By buttonNextOrderForm = By.xpath(".//button[contains (text(), 'Далее')]");
+
+    public By getButtonNextOrderForm() {
+        return this.buttonNextOrderForm;
     }
 
-    public By getcalendarfieldorderForm() {
-        return this.calendarfieldorderForm;
+
+    private By calendarFieldOrderForm = By.cssSelector(".react-datepicker__input-container");
+
+    public By getCalendarFieldOrderForm() {
+        return this.calendarFieldOrderForm;
     }
 
-    public By getcalendardataselectdorderForm() {
-        return this.calendardataselectdorderForm;
+    private By calendarDataSelectOrderForm = By.xpath(".//div[contains (@aria-label, '1-е ноября 2023')]");
+
+    public By getCalendarDataSelectOrderForm() {
+        return this.calendarDataSelectOrderForm;
     }
 
-    public By gettitleOrderScooterPageForm() {
-        return this.titleOrderScooterPageForm;
+    private By rentPeriodField = By.cssSelector(".Dropdown-root");
+
+    public By getRentPeriodField() {
+        return this.rentPeriodField;
     }
 
-    public By getrentperiodfield() {
-        return this.rentperiodfield;
+    private By rentPeriodSelectDropDownField = By.xpath(".//div[@class='Dropdown-option'][1]");
+
+    public By getRentPeriodSelectDropDownField() {
+        return this.rentPeriodSelectDropDownField;
     }
 
-    public By getrentperioselectdropwdownfield() {
-        return this.rentperioselectdropwdownfield;
-    }
+    private By checkboxColor1 = By.cssSelector("#black");
 
-    public By getcheckboxColor1() {
+    public By getBlackCheckboxColor() {
         return this.checkboxColor1;
     }
 
-    public By getCheckboxColor2() {
+    private By checkboxColor2 = By.cssSelector("#grey");
+
+    public By getGreyCheckboxColor() {
         return this.checkboxColor2;
     }
 
-    public By getCommentFieldorderForm() {
-        return this.CommentFieldorderForm;
+    private By commentFieldOrderForm = By.xpath(".//input[contains (@placeholder,'Комментарий')]");
+
+    public By getCommentFieldOrderForm() {
+        return this.commentFieldOrderForm;
     }
 
-    public By getbuttonOrderorderForm() {
-        return this.buttonOrderorderForm;
+    private By buttonOrderOrderForm = By.xpath(".//div[contains (@class,'Order')]/button[contains (text(), 'Заказать')]");
+
+    public By getButtonOrderOrderForm() {
+        return this.buttonOrderOrderForm;
     }
 
-    public By getbuttonYesorderForm() {
-        return this.buttonYesorderForm;
+    private By buttonYesOrderForm = By.xpath(".//div[contains (@class,'Order')]/button[contains (text(), 'Да')]");
+
+    public By getButtonYesOrderForm() {
+        return this.buttonYesOrderForm;
     }
 
-    public void clickaccordingItemButton(String accordingItemButton) {
-        WebElement element = this.webDriver.findElement(By.xpath(accordingItemButton));
-        ((JavascriptExecutor)this.webDriver).executeScript("arguments[0].scrollIntoView();", new Object[]{element});
-        this.webDriver.findElement(By.xpath(accordingItemButton)).click();
+    public By assertFirstFormOrder = By.cssSelector("div .Order_Header__BZXOb");
+
+    public By getAssertFirstFormOrder() {
+        return this.assertFirstFormOrder;
     }
 
-    public By setdataCalendarfield(String data) {
+    public By assertSecondFormOrder = By.cssSelector("div .Order_ModalHeader__3FDaJ");
+
+    public By getAssertSecondFormOrder() {
+        return this.assertSecondFormOrder;
+    }
+
+    private By titleScooterPageForm = By.cssSelector("div .Order_Header__BZXOb");
+
+    public By getTitleScooterPageForm() {
+        return this.titleScooterPageForm;
+    }
+
+    public By setDataCalendarField(String data) {
         return By.xpath(".//div[contains (@aria-label, '" + data + "')]");
     }
 
-    public By setrentperioselectdropwdownfield(int number) {
+    public By setRentPeriodSelectDropDownField(int number) {
         return By.xpath(".//div[@class='Dropdown-option'][" + number + "]");
     }
+
+
 }
