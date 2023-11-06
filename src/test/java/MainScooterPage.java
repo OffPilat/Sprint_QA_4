@@ -64,7 +64,6 @@ public class MainScooterPage {
 
     @Test
     public void ValidationTextDropDownListOfQuestions() {
-        SelectorsMainPage selectorsMainPage = new SelectorsMainPage(this.webDriver);
         Steps steps = new Steps(this.webDriver);
         steps
                 .open(SelectorsMainPage.URL_MAIN_PAGE)
